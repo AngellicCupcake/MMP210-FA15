@@ -8,7 +8,7 @@ function setup() {
    */ 
     
     var x = 50;
-    var y = 0;
+    var y = 60;
     var gridWidth = width - 180;
     
     for(var i=0; i<84; i++){
@@ -16,7 +16,7 @@ console.log(i);
        // drawWindow(50*i, 50*i);
         
         drawWindow(x, y);
-        x += 180;
+        x += 190;
         
         if(x>gridWidth){
             x = 50;
@@ -36,7 +36,12 @@ function drawWindow(startX, startY){
     stroke(230, 187, 255);
     strokeWeight(5);
     var rectWidth = 150;
+    //var winHeight = 150; 
+    //var winWidth = 280;
     rect(startX, startY, 150, 280);
+    
+    
+    //rect(startX, startY, winWidth, winHeight);
     
     fill(230, 187, 255);
     rect(startX-10, startY, 170, 30);
@@ -50,6 +55,13 @@ function drawWindow(startX, startY){
     
     
 }
+
+/*
+    line(startX + winWidth/2, startY, startX + winWidth/2, startY + winHeight);
+    
+    line(startX,startY * .333, startX + winWidth, startY * .3333);
+
+*/
 
 
 
