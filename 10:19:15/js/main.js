@@ -1,14 +1,15 @@
 function setup() {
     //create the Canvas
-    createCanvas(windowWidth, 3600);  
+    createCanvas(windowWidth, 5000);  
      
    /*drawWindow(600, 100);
     drawWindow(350, 100);
     drawWindow(100, 100);
    */ 
     
-    var x = 0;
+    var x = 50;
     var y = 0;
+    var gridWidth = width - 180;
     
     for(var i=0; i<84; i++){
 console.log(i);
@@ -17,12 +18,15 @@ console.log(i);
         drawWindow(x, y);
         x += 180;
         
-        if(x>windowWidth-150){
-            x = 0;
-            y += 300;
+        if(x>gridWidth){
+            x = 50;
+            y += 400;
         }
             
 }
+    
+    
+    
     
 }
  
@@ -33,6 +37,16 @@ function drawWindow(startX, startY){
     strokeWeight(5);
     var rectWidth = 150;
     rect(startX, startY, 150, 280);
+    
+    fill(230, 187, 255);
+    rect(startX-10, startY, 170, 30);
+    rect(startX-10, startY+280, 170, 30);
+    
+    stroke(230, 187, 255);
+    line(startX+75, startY+275, startX+75, startY+35);
+    
+    stroke(230, 187, 255);
+    line(startX+145, startY+150, startX+5, startY+150);
     
     
 }
