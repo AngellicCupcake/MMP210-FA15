@@ -56,8 +56,7 @@ function drawWindow(startX, startY){
     
 }
 
-/*
-    line(startX + winWidth/2, startY, startX + winWidth/2, startY + winHeight);
+/*  line(startX + winWidth/2, startY, startX + winWidth/2, startY + winHeight);
     
     line(startX,startY * .333, startX + winWidth, startY * .3333);
 
