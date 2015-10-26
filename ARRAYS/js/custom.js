@@ -9,14 +9,19 @@ function Bubble(){
     this.r = 25; // r is for radius which is 1/2 the width of the circle
     this.bubbleSize = this.r*2; // width and height are twice the radius
     
+    this.bubbleColor = color(255, 207, 216);
     //method: draw bubble
     this.drawBubble = function(){
-    fill(255, 207, 216);
+    fill(this.bubbleColor);
     stroke(225, 177, 186);
     ellipse(this.x, this.y, this.bubbleSize, this.bubbleSize);
 
     }
     
+    this.changeColor = function(){
+        this.bubbleColor = color(218, 183, 255);
+        this.drawBubble();
+    }
 }
 //End Bubble
 
@@ -70,7 +75,7 @@ function mousePressed(){
     for(var i=0; i < myArray.length; i++){
         d = dist(mouseX, mouseY, myArray[i].x, myArray[i].y);
          if(d < myArray[i].r){
-             console.log("It Worked");
+             myArray[i].changeColor(); // calls the color change function
          }
     }
 
