@@ -1,21 +1,39 @@
 // Global Var
 
+// Bubble Constructor
+
+function Bubble(){
+    // Create x and y properties (variables)
+    this.x = random(width);
+    this.y = random(height);
+    this.r = 25; // r is for radius which is 1/2 the width of the circle
+    this.bubbleSize = this.r*2; // width and height are twice the radius
+    
+    // draw bubble
+    fill(255, 207, 216);
+    stroke(225, 177, 186);
+    ellipse(this.x, this.y, this.bubbleSize, this.bubbleSize);
+    
+}
+//End Bubble
+
+
 
 function setup(){
     // Create Canvas
     
-    var cnv = createCanvas(windowWidth,windowHeight);
+    var cnv = createCanvas(800,3000);
     cnv.parent("windows");
     
     var myArray = []; // Create blank array
     //Add things
     
-    for(var i=0; i<1201; i++){
+    for(var i=0; i<1000; i++){
  //       myArray[i] = "apple number " + i;
         
-        // This adds circles to the array
-        //but we won't be able to address individual circles later
-        myArray[i] = ellipse(i,i,10,10);
+        // adds bubbles to the array
+        myArray[i] = new Bubble();
+        
     }
     
     // log out of the array
@@ -25,7 +43,7 @@ function setup(){
     
     for(var i=0; i < myArray.length; i++){
         // log out each item, for ellipses it will return the whole p5 object instead.
-        myArray[i]+=10;
+    
         console.log(myArray[i]);
     }
     
