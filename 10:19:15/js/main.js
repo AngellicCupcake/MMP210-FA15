@@ -32,8 +32,8 @@ console.log(i);
  
 
 function drawWindow(startX, startY){
-    fill(70, 27, 126);
-    stroke(230, 187, 255);
+    fill(255, 237, 246);
+    stroke(249, 167, 176);
     strokeWeight(5);
     var rectWidth = 150;
     //var winHeight = 150; 
@@ -43,14 +43,14 @@ function drawWindow(startX, startY){
     
     //rect(startX, startY, winWidth, winHeight);
     
-    fill(230, 187, 255);
+    fill(249, 167, 176);
     rect(startX-10, startY, 170, 30);
     rect(startX-10, startY+280, 170, 30);
     
-    stroke(230, 187, 255);
+    stroke(249, 167, 176);
     line(startX+75, startY+275, startX+75, startY+35);
     
-    stroke(230, 187, 255);
+    stroke(249, 167, 176);
     line(startX+145, startY+150, startX+5, startY+150);
     
     
