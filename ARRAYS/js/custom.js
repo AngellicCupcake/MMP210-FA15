@@ -1,5 +1,5 @@
 // Global Var
-
+var myArray = []; // Create blank array
 // Bubble Constructor
 
 function Bubble(){
@@ -25,13 +25,12 @@ function Bubble(){
 function setup(){
     // Create Canvas
     
-    var cnv = createCanvas(800,3000);
+    var cnv = createCanvas(800,800);
     cnv.parent("windows");
-    
-    var myArray = []; // Create blank array
+
     //Add things
     
-    for(var i=0; i<1000; i++){
+    for(var i=0; i<100; i++){
  //       myArray[i] = "apple number " + i;
         
         // adds bubbles to the array
@@ -45,12 +44,12 @@ function setup(){
     
     //Loop to go through every item on the array.
     
-    for(var i=0; i < myArray.length; i++){
+    /*for(var i=0; i < myArray.length; i++){
         // log out each item, for ellipses it will return the whole p5 object instead.
     
         console.log(myArray[i]);
     }
-    
+    */
     
     
    /* console.log(myArray[0]);
@@ -60,3 +59,19 @@ function setup(){
     
     
 } // Setup End
+
+function mousePressed(){
+    // Check to see if it's working.
+    console.log("mouse is Pressed");
+
+
+    //  loop through myArrayy and check if mouse is in each Bubble
+        var d;
+    for(var i=0; i < myArray.length; i++){
+        d = dist(mouseX, mouseY, myArray[i].x, myArray[i].y);
+         if(d < myArray[i].r){
+             console.log("It Worked");
+         }
+    }
+
+}
