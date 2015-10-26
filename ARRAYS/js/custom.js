@@ -9,10 +9,13 @@ function Bubble(){
     this.r = 25; // r is for radius which is 1/2 the width of the circle
     this.bubbleSize = this.r*2; // width and height are twice the radius
     
-    // draw bubble
+    //method: draw bubble
+    this.drawBubble = function(){
     fill(255, 207, 216);
     stroke(225, 177, 186);
     ellipse(this.x, this.y, this.bubbleSize, this.bubbleSize);
+
+    }
     
 }
 //End Bubble
@@ -33,6 +36,7 @@ function setup(){
         
         // adds bubbles to the array
         myArray[i] = new Bubble();
+        myArray[i].drawBubble();
         
     }
     
