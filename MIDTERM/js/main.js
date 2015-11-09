@@ -1,9 +1,9 @@
 // Global Variables
-    var body = color(251, 187, 185);
-    var face = color(111, 78, 55);
+    var body;
+    var face;
     
-    var invertedbody = color(0, 0, 0 );
-    var invertedface = color(193, 27, 23);
+    var invertedbody;
+    var invertedface;
 // Create Canvas
 
 function setup(){
@@ -56,7 +56,8 @@ function setup(){
         
     body = color(251, 187, 185);
     face = color(111, 78, 55);
-    
+    invertedbody = color(0, 0, 0);
+    invertedface = color(228, 27, 23);
     lineColor = red;
         
     eyeX = hopX-20;
