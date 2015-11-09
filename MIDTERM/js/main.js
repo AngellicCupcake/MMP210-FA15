@@ -1,5 +1,9 @@
 // Global Variables
-
+    var body = color(251, 187, 185);
+    var face = color(111, 78, 55);
+    
+    var invertedbody = color(0, 0, 0 );
+    var invertedface = color(193, 27, 23);
 // Create Canvas
 
 function setup(){
@@ -10,6 +14,7 @@ function setup(){
     drawBunny();
     var x = 100;
     var y = 120;
+    
     for(var i=0; i<=40; i++){
         //console.log(i);
         drawBunny(x,y);
@@ -18,8 +23,14 @@ function setup(){
             x = 100;
             y += 200;
         }
+        
+        
             
     }
+    
+  
+    
+    
 }
 
 // Create Functions
@@ -43,9 +54,9 @@ function setup(){
     noseD = hopX+8;//108; //x
     noseDD = hopY+25;//145; //y
         
-    pink = color(251, 187, 185 );
-    purple = color(218, 183, 255);
-    brown = color(111, 78, 55);
+    body = color(251, 187, 185);
+    face = color(111, 78, 55);
+    
     lineColor = red;
         
     eyeX = hopX-20;
@@ -54,24 +65,25 @@ function setup(){
     
     //draw the circle
      
-    fill(pink);
+    fill(body);
     ellipse(earX, earY, earWidth, earLength);
 
-    fill(pink);
+    fill(body);
     ellipse(earX+60, earY, earWidth, earLength);
     
-    fill(pink);
+    fill(body);
     ellipse(bodyX, bodyY, circleSize, circleSize);
         
-    fill(brown);
+    fill(face);
     triangle(noseX, noseY, noseB, noseBB, noseD, noseDD);
     
-    fill(brown);
+    fill(face);
     ellipse(eyeX, eyeY, eyeSize, eyeSize);
         
-    fill(brown);
+    fill(face);
     ellipse(eyeX+39, eyeY, eyeSize, eyeSize);
     
        
         
     }
+
