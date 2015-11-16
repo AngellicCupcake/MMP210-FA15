@@ -51,6 +51,7 @@ function mousePressed() {
     drawBunnies();
 }
 
+// Draw bunnies
 function drawBunnies() {
     var x = 100;
     var y = 280;
@@ -71,7 +72,7 @@ function drawBunnies() {
     }
 }
 // Create Functions
-
+// The actual bunnies
 function drawBunny(hopX, hopY) {
     //console.log("hopX",hopX);   
     earX = hopX - 30; //70;
