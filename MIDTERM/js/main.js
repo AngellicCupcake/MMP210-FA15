@@ -1,7 +1,8 @@
 // Global Variables
+// Variables for body
 var body;
 var face;
-
+// evil bunny
 var invertedbody;
 var invertedface;
 var lineColor;
@@ -47,15 +48,21 @@ function mousePressed() {
         face = color('black');
         
     }
-
+    // Draws the bunnies with the evil or random color.
     drawBunnies();
+    
+    // Make random bunnies appear when mouse is pressed anywhere.
+    drawBunny(random(width), random(height));
 }
 
 // Draw bunnies
 function drawBunnies() {
+    // Sets how far apart bunnies are
     var x = 100;
     var y = 280;
-
+    
+    // For loop sets the function so after a certain width it will
+    // Move to the next row
     for (var i = 0; i <= 40; i++) {
         //console.log(i);
         drawBunny(x, y);
@@ -78,13 +85,13 @@ function drawBunny(hopX, hopY) {
     earX = hopX - 30; //70;
     earY = hopY - 70 //50;
     circleSize = 100;
-
+    // Draws the ears
     earWidth = 25;
     earLength = 75;
-
+    // Draws the body
     bodyX = hopX; //100;
     bodyY = hopY; //120;
-
+    // Draws the nose
     noseX = hopX - 8; //92; //x
     noseY = hopY + 25; //145; //y
     noseB = hopX; //100;// x
@@ -92,15 +99,14 @@ function drawBunny(hopX, hopY) {
     noseD = hopX + 8; //108; //x
     noseDD = hopY + 25; //145; //y
 
-
-
-
+    // Draws tje eues
     eyeX = hopX - 20;
     eyeY = hopY;
     eyeSize = 10;
 
     //draw the circle
 
+    // Draws the bunnies with the sizes and fill color.
     fill(body);
     ellipse(earX, earY, earWidth, earLength);
 
