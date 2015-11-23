@@ -12,11 +12,10 @@ function draw(){
 }
 
 function drawBird(birds){
-    b = birds.birds[5].members[1];
+    var array = ["one, two, three"];
     loaded = true;
     console.log(birds);
-    console.log(birds.birds[5].members[1]);
-    text(b, 0,0, 100, 100);
-    
+    console.log(birds.birds[2].members[array]);
+
     
 }
